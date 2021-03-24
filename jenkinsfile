@@ -1,35 +1,4 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Zegdon 
-Zegdon
-/
-jenkin-devops-microservice
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-jenkin-devops-microservice/Jenkinsfile
-@Zegdon
-Zegdon runtesztfail2
-Latest commit 89be626 5 days ago
- History
- 1 contributor
-95 lines (73 sloc)  2.84 KB
-  
-//SCRIPTED
+ //SCRIPTED
 
 
 
@@ -44,7 +13,10 @@ pipeline {
       registry = "csabaazari/currency-exchange-devops11"
       dockerHome = tool 'myDocker'
       mavenHome = tool 'myMaven'
+	  jdkHome = tool 'myJdk'
       PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	  PATH = "$dockerHome/bin:$jdkHome/bin:$PATH"
+	  
 
       }
 
@@ -55,6 +27,7 @@ pipeline {
                 steps {
                        sh 'mvn --version'
                        sh 'docker --version'
+					   sh 'java --version'
 
                       echo "Build"
                       echo "PATH - $PATH"
