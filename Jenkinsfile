@@ -19,6 +19,10 @@ pipeline {
 	  
 
       }
+	
+	tools {
+		jdk "11"
+	}
 
 
 
