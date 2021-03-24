@@ -15,7 +15,7 @@ pipeline {
       mavenHome = tool 'myMaven'
 	  jdkHome = tool 'myJdk'
       PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
-	  PATH = "$dockerHome/bin:$jdkHome/bin:$PATH"
+	//  PATH = "$dockerHome/bin:$jdkHome/bin:$PATH"
 	  
 
       }
