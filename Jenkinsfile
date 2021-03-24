@@ -36,9 +36,9 @@ pipeline {
                       echo "JOB_NAME - $env.JOB_NAME"
                       echo "BUILD_TAG - $env.BUILD_TAG"
                       echo "BUILD_URL - $env.BUILD_URL"
-		      echo "%JAVA_HOME%"
-	              echo "%JRE_HOME%"
-		      echo "%MAVEN_HOME% yields"
+		      echo "JAVA_HOME - $env.JAVA_HOME%"
+	              echo "JRE_HOME - $env.JRE_HOME%"
+		      echo "MAVEN_HOME- $env.MAVEN_HOME%"
 			
 			
                 }
