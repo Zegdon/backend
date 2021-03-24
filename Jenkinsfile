@@ -19,12 +19,6 @@ pipeline {
 	  
 
       }
-	
-	tools {
-		jdk "11"
-	}
-
-
 
         stages {
             stage('Checkout') {
