@@ -1,0 +1,15 @@
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\security\WebSecurityConfig.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\service\exceptions\UnsupportedOperationException.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\security\JwtAuthorizationFilter.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\service\impl\FileManagementServiceImplFileSystem.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\security\config\JwtAuthConfig.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\controller\dto\FileDescriptorDto.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\controller\converters\Converter.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\model\FileDescription.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\service\FileManagementService.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\model\Service.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\service\impl\FileManagementServiceImplGoogleBucket.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\service\exceptions\FileNotFoundException.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\controller\FileManagementController.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\repository\FileDescriptionRepository.java
+G:\Users\user\Downloads\stc-main-devel\stc-main-devel\backend\filemanagement-service\src\main\java\hu\me\iit\malus\thesis\filemanagement\FileManagementServiceApplication.java

@@ -1,0 +1,5 @@
+hu\me\iit\malus\thesis\course\controller\CourseControllerTest$CourseControllerTestContextConfiguration.class
+hu\me\iit\malus\thesis\course\repository\CourseRepositoryTest.class
+hu\me\iit\malus\thesis\course\service\impl\CourseServiceImplTest.class
+hu\me\iit\malus\thesis\course\controller\CourseControllerTest.class
+hu\me\iit\malus\thesis\course\controller\helper\JwtTestHelper.class

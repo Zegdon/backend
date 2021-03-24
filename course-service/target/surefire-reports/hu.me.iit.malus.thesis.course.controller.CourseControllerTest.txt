@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: hu.me.iit.malus.thesis.course.controller.CourseControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.947 s - in hu.me.iit.malus.thesis.course.controller.CourseControllerTest

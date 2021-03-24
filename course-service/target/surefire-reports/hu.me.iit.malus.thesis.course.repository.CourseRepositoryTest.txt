@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: hu.me.iit.malus.thesis.course.repository.CourseRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.442 s - in hu.me.iit.malus.thesis.course.repository.CourseRepositoryTest

@@ -1,0 +1,10 @@
+hu\me\iit\malus\thesis\email\security\WebSecurityConfig.class
+hu\me\iit\malus\thesis\email\model\Mail.class
+hu\me\iit\malus\thesis\email\security\JwtAuthorizationFilter.class
+hu\me\iit\malus\thesis\email\service\impl\MailServiceImpl.class
+hu\me\iit\malus\thesis\email\service\MailService.class
+hu\me\iit\malus\thesis\email\model\exception\MailCouldNotBeSentException.class
+hu\me\iit\malus\thesis\email\controller\validators\CustomGlobalExceptionHandler.class
+hu\me\iit\malus\thesis\email\security\config\JwtAuthConfig.class
+hu\me\iit\malus\thesis\email\EmailServiceApplication.class
+hu\me\iit\malus\thesis\email\controller\MailController.class

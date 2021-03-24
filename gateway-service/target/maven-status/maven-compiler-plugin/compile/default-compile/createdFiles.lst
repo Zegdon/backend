@@ -1,0 +1,3 @@
+hu\me\iit\malus\thesis\gateway\GatewayServiceApplication.class
+hu\me\iit\malus\thesis\gateway\security\config\TokenAuthenticationFilterConfig.class
+hu\me\iit\malus\thesis\gateway\security\TokenValidatingFilter.class
