@@ -39,15 +39,15 @@ pipeline {
                 }
             }
 
-                        stage('Compile'){
-                            steps {
-                                sh "mvn clean compile"
+                    //    stage('Compile'){
+                      //      steps {
+                       //         sh "mvn clean compile"
 
 
-                            }
-
-
-                        }
+                         //   }
+//
+//
+                      //  }
 						stage('Package'){
                             steps {
                                 sh "mvn clean package"
