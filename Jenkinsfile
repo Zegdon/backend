@@ -50,7 +50,7 @@ pipeline {
                       //  }
 						stage('Package'){
                             steps {
-                                sh "docker-compose up"
+                                sh "mvn clean package"
 
 
                             }
