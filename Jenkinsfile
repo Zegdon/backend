@@ -42,18 +42,18 @@ pipeline {
                 }
             }
 
-                        stage('Compile'){
+                        stage('Mvn clean package'){
                             steps {
-                                sh "mvn test"
+                                sh "mvn clean package"
 
 
                             }
 
 
                         }
-						stage('Package'){
+			stage('Docker compose'){
                             steps {
-                                sh "mvn clean package"
+                                sh "docker-compose up"
 
 
                             }
