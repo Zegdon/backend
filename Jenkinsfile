@@ -13,7 +13,7 @@ pipeline {
       registry = "csabaazari/currency-exchange-devops11"
       dockerHome = tool 'myDocker'
       mavenHome = tool 'myMaven'
-	  jdkHome = tool 'myJdk'
+	//  jdkHome = tool 'myJdk'
       PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
 	//  PATH = "$dockerHome/bin:$jdkHome/bin:$PATH"
 	  
