@@ -55,7 +55,7 @@ pipeline {
                             steps {
                         sh "ls -la"
 			//	sh "docker-compose build"
-			//	sh "docker-compose up -d"
+				sh "docker-compose up"
 
 
                             }
