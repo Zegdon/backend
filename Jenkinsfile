@@ -53,28 +53,29 @@ pipeline {
                         }
 			stage('Docker compose'){
                             steps {
-                                sh "docker-compose up"
+                                sh "docker-compose build"
+				sh "docker-compose up -d"
 
 
                             }
 
 
                         }
-		stage ('Build docker image') {
-                            steps {
-                            //"docker build -t csabaazari/currency-exchange-devops:$env.BUILD_TAG"
-                            script {
-                               dockerImage = docker.build("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
-
-                             //  dockerImage = docker.run ("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
-                                }
-                            }
-                        }
-		stage ('Run docker image') {
-                            steps {
-                            sh "docker run -d -p 8077:8000 csabaazari/currency-exchange-devops11:${env.BUILD_TAG}"
-                            }
-                        }
+//		stage ('Build docker image') {
+//                            steps {
+//                            //"docker build -t csabaazari/currency-exchange-devops:$env.BUILD_TAG"
+//                            script {
+//                               dockerImage = docker.build("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
+//
+//                             //  dockerImage = docker.run ("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
+ //                               }
+  //                          }
+   //                     }
+//		stage ('Run docker image') {
+ //                           steps {
+   //                         sh "docker run -d -p 8077:8000 csabaazari/currency-exchange-devops11:${env.BUILD_TAG}"
+     //                       }
+     //                   }
                  
       }
       post {
