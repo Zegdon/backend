@@ -54,8 +54,9 @@ pipeline {
 			stage('Docker compose'){
                             steps {
                         sh "ls -la"
+			sh " docker-compose -f ~/var/jenkins_home/workspace/docker-compose.yml"	    
 			//	sh "docker-compose build"
-				sh "docker-compose up"
+			//	sh "docker-compose up"
 
 
                             }
