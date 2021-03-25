@@ -53,8 +53,9 @@ pipeline {
                         }
 			stage('Docker compose'){
                             steps {
-                                sh "docker-compose build"
-				sh "docker-compose up -d"
+                        sh "ls"
+			//	sh "docker-compose build"
+			//	sh "docker-compose up -d"
 
 
                             }
