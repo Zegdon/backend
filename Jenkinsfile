@@ -26,6 +26,7 @@ pipeline {
                        sh 'mvn --version'
                        sh 'docker --version'
 		       sh 'java -version'
+			sh 'docker-compose --version'
 
                       echo "Build"
                       echo "PATH - $PATH"
@@ -53,8 +54,7 @@ pipeline {
                         }
 			stage('Docker compose'){
                             steps {
-                        sh "ls -la"
-			sh "docker-compose --version"	    
+                        sh "ls -la"	    
 		//	sh "docker-compose –f build-compose.yml"
 				    
 			//sh " docker-compose -f ~/var/jenkins_home/workspace/docker-compose.yml"	    
