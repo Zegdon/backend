@@ -51,9 +51,7 @@ pipeline {
 
 
                             }
-
-
-                        }
+                         }
 		
 		
 			stage('Docker compose'){
@@ -68,9 +66,8 @@ pipeline {
 
 
                             }
+                          }
 
-
-                        }
 		stage ('Build docker image') {
                            steps {
 //                            //"docker build -t csabaazari/currency-exchange-devops:$env.BUILD_TAG"
@@ -84,10 +81,10 @@ pipeline {
 //		stage ('Run docker image') {
  //                           steps {
    //                         sh "docker run -d -p 8077:8000 csabaazari/currency-exchange-devops11:${env.BUILD_TAG}"
-     //                       }
-     //                   }
+                          }
+                      }
                  
-    //  }
+     }
       post {
             always {
                 echo 'Im awsome. I run always'
