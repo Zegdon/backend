@@ -10,7 +10,7 @@ pipeline {
       // agent { docker { image 'maven:latest' }  }
       // agent { docker { image 'node:13.8' }  }
       environment{
-      registry = "csabaazari/currency-exchange-devops11"
+      registry = "csabaazari/"
       registryCredential = 'dockerlogin'
       dockerHome = tool 'myDocker'
       mavenHome = tool 'myMaven'
