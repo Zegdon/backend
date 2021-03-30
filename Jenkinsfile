@@ -53,20 +53,21 @@ pipeline {
                         }
 
 
-                        stage('push dockerimage'){
-                        steps{
-                        script{
-                            docker.withRegistry('https://hub.docker.com/','dockerlogin'){
+//                         stage('push dockerimage'){
+//                         steps{
+//                         script{
+//                             docker.withRegistry('https://hub.docker.com/','dockerlogin'){
+//
+//                           //  dockerImage.push('csabaazari/user-service:latest');
+//                           //  dockerImage.push('latest');
+//                             }
+//                         }
+//                     }
+//                }
 
-                          //  dockerImage.push('csabaazari/user-service:latest');
-                          //  dockerImage.push('latest');
-                            }
-                        }
-                    }
-               }
-
-stage('Docker push') {
+                        stage('Docker push') {
                             steps {
+                            sh 'docker login -u csabaazari -p Hwd1nn80320102'
                             sh "docker push csabaazari/user-service:latest"
 
                             }
