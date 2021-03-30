@@ -65,7 +65,7 @@ pipeline {
 //                     }
 //                }
 
-                        stage('Docker pus1h') {
+                        stage('Docker pu12s1h') {
                             steps {
                             sh 'docker login -u csabaazari -p Hwd1nn80320102'
                             sh "docker push csabaazari/user-service:latest"
