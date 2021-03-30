@@ -58,8 +58,9 @@ pipeline {
 		//	sh "docker-compose –f build-compose.yml"
 				    
 			//sh " docker-compose -f ~/var/jenkins_home/workspace/docker-compose.yml"	    
-			//	sh "docker-compose build"
-				sh "docker-compose up"
+				sh "docker-compose build"
+			//	sh "docker-compose up"
+				sh "docker-compose push"
 
 
                             }
