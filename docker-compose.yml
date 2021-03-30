@@ -204,7 +204,7 @@ services:
     build:
       context: ./user-service
       dockerfile: dockerfile
-    image: /csabaazari/user-service:latest
+    image: csabaazari/user-service:latest
     networks:
       - studentTaskChecker
     ports:
