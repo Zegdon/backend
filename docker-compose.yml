@@ -66,7 +66,7 @@ services:
     build:
       context: ./config-service
       dockerfile: dockerfile
-    image: config-service:latest
+    image: csabaazari/config-service:latest
     networks:
       - studentTaskChecker
     ports:
@@ -77,7 +77,7 @@ services:
     build:
       context: ./discovery-service
       dockerfile: dockerfile
-    image: discovery-service-peer1:latest
+    image: csabaazari/discovery-service-peer1:latest
     networks:
       - studentTaskChecker
     ports:
@@ -90,7 +90,7 @@ services:
     build:
       context: ./discovery-service
       dockerfile: dockerfile
-    image: discovery-service-peer2:latest
+    image: csabaazari/discovery-service-peer2:latest
     networks:
       - studentTaskChecker
     ports:
@@ -103,7 +103,7 @@ services:
     build:
       context: ./gateway-service
       dockerfile: dockerfile
-    image: gateway-service:latest
+    image: csabaazari/gateway-service:latest
     networks:
       - studentTaskChecker
     ports:
@@ -118,7 +118,7 @@ services:
     build:
       context: ./email-service
       dockerfile: dockerfile
-    image: email-service:latest
+    image: csabaazari/email-service:latest
     networks:
       - studentTaskChecker
     ports:
@@ -134,7 +134,7 @@ services:
     build:
       context: ./task-service
       dockerfile: dockerfile
-    image: task-service:latest
+    image: csabaazari/task-service:latest
     networks:
       - studentTaskChecker
     ports:
@@ -150,7 +150,7 @@ services:
     build:
       context: ./course-service
       dockerfile: dockerfile
-    image: course-service:latest
+    image: csabaazari/course-service:latest
     networks:
       - studentTaskChecker
     ports:
@@ -171,7 +171,7 @@ services:
     build:
       context: ./filemanagement-service
       dockerfile: dockerfile
-    image: filemanagement-service:latest
+    image: csabaazari/filemanagement-service:latest
     networks:
       - studentTaskChecker
     ports:
@@ -188,7 +188,7 @@ services:
     build:
       context: ./feedback-service
       dockerfile: dockerfile
-    image: feedback-service:latest
+    image: csabaazari/feedback-service:latest
     networks:
       - studentTaskChecker
     ports:
