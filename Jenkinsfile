@@ -50,15 +50,16 @@ pipeline {
                             }
 
                         }
-                /*  stage('Docker push image') {
-                 steps {
-                 sciprt {
-                        dockerImage = docker.build ("csabaazari/user-service:latest")
+                  stage('Docker push image') {
+                  docker.Registry('https://hub.docker.com/', 'dockerlogin') {
+                    sh "docker push csabaazari/user-service:latest"
+                  }
+            }
 
-                 }
 
-                 }
-                 } */
+
+
+
 
       }
       post {
