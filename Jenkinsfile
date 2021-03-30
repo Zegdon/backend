@@ -50,7 +50,7 @@ pipeline {
                             }
 
                         }
-                 stage('Docker push image') {
+                /*  stage('Docker push image') {
                  steps {
                  sciprt {
                         dockerImage = docker.build ("csabaazari/user-service:latest")
@@ -58,7 +58,7 @@ pipeline {
                  }
 
                  }
-                 }
+                 } */
 
       }
       post {
