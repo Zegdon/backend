@@ -62,20 +62,20 @@ pipeline {
 		//	sh "docker-compose –f build-compose.yml"
 				    
 			//sh " docker-compose -f ~/var/jenkins_home/workspace/docker-compose.yml"	    
-			//	sh "docker-compose build"
+				sh "docker-compose build"
 			//	sh "docker-compose up"
-				sh "docker push docker push csabaazari/user-service:latest"
+				//sh "docker push docker push csabaazari/user-service:latest"
 
 
                             }
 
 
                         }
-//		stage ('Build docker image') {
-//                            steps {
+		stage ('Build docker image') {
+                           steps {
 //                            //"docker build -t csabaazari/currency-exchange-devops:$env.BUILD_TAG"
-//                            script {
-//                               dockerImage = docker.build("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
+                          script {
+                               dockerImage = docker.build("csabaazari/user-service:latest:${env.BUILD_TAG}")
 //
 //                             //  dockerImage = docker.run ("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
  //                               }
@@ -100,4 +100,4 @@ pipeline {
             }
       }
 
-}
+
