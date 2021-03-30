@@ -67,8 +67,17 @@ pipeline {
 
                         stage('Docker pu12s1h') {
                             steps {
-                            sh 'docker login -u csabaazari -p '
+                            sh 'docker login -u csabaazari -p 56ffa358-3d14-48e1-a7c8-aa24bdb19a37'
                             sh "docker push csabaazari/user-service:latest"
+                            sh "docker push csabaazari/config-service:latest"
+                            sh "docker push csabaazari/discovery-service-peer1:latest"
+                            sh "docker push csabaazari/discovery-service-peer2:latest"
+                            sh "docker push csabaazari/gateway-service:latest"
+                            sh "docker push csabaazari/email-service:latest"
+                            sh "docker push csabaazari/task-service:latest"
+                            sh "docker push csabaazari/course-service:latest"
+                            sh "docker push csabaazari/filemanagement-service:latest"
+                            sh "docker push csabaazari/feedback-service:latest"
 
                             }
 
