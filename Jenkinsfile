@@ -51,12 +51,21 @@ pipeline {
 
                         }
                   stage('Docker push image') {
+                  steps{
+                  script {
+
                   docker.Registry('https://hub.docker.com/', 'dockerlogin') {
-                    sh "docker push csabaazari/user-service:latest"
+
+
                   }
+                }
+               }
             }
 
-
+ stage('Docker push?') {
+                            steps {
+                            sh "docker push csabaazari/user-service:latest"
+                            }
 
 
 
