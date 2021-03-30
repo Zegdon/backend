@@ -58,14 +58,20 @@ pipeline {
                         script{
                             docker.withRegistry('https://registry.hub.docker.com/','dockerlogin'){
 
-                            dockerImage.push('csabaazari/user-service:latest');
-                            dockerImage.push('latest');
+                          //  dockerImage.push('csabaazari/user-service:latest');
+                          //  dockerImage.push('latest');
                             }
                         }
                     }
                }
 
+stage('Docker push') {
+                            steps {
+                            sh "docker push csabaazari/user-service:latest"
 
+                            }
+
+                        }
       }
       post {
             always {
