@@ -55,46 +55,16 @@ pipeline {
 
                         }
 		
-		stage('Building our image') { 
-
-            steps { 
-
-                script { 
-
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER" 
-
-                }
-
-            } 
-
-        }
-
-        stage('Deploy our image') { 
-
-            steps { 
-
-                script { 
-
-                    docker.withRegistry( '', registryCredential ) { 
-
-                        dockerImage.push() 
-
-                    }
-
-                } 
-
-            }
-
-        } 
-		//	stage('Docker compose'){
-                 //           steps {
-                  //      sh "ls -la"	    
+		
+			stage('Docker compose'){
+                            steps {
+                        sh "ls -la"	    
 		//	sh "docker-compose –f build-compose.yml"
 				    
 			//sh " docker-compose -f ~/var/jenkins_home/workspace/docker-compose.yml"	    
 			//	sh "docker-compose build"
 			//	sh "docker-compose up"
-			//	sh "docker-compose push"
+				sh "docker push docker push csabaazari/user-service:latest"
 
 
                             }
@@ -130,5 +100,5 @@ pipeline {
             }
       }
 
-//}
+}
 
