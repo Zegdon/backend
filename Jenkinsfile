@@ -62,12 +62,12 @@ pipeline {
                }
             }
 
- stage('Docker push?') {
+                            stage('Docker push?') {
                             steps {
                             sh "docker push csabaazari/user-service:latest"
                             }
 
-
+                        }
 
 
       }
