@@ -1,4 +1,5 @@
- //SCRIPTED
+
+//SCRIPTED
 
 
 
@@ -7,28 +8,23 @@
 
 pipeline {
        agent any
-      // agent { docker { image 'maven:latest' }  }
-      // agent { docker { image 'node:13.8' }  }
+
       environment{
       registry = "csabaazari/"
-      registryCredential = 'dockerlogin'
       dockerHome = tool 'myDocker'
+      registryCredential = 'dockerlogin'
       mavenHome = tool 'myMaven'
-	      
-	//  jdkHome = tool 'myJdk'
       PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
-	//  PATH = "$dockerHome/bin:$jdkHome/bin:$PATH"
-	  
 
       }
+
+
 
         stages {
             stage('Checkout') {
                 steps {
                        sh 'mvn --version'
                        sh 'docker --version'
-		       sh 'java -version'
-			sh 'docker-compose --version'
 
                       echo "Build"
                       echo "PATH - $PATH"
@@ -37,54 +33,34 @@ pipeline {
                       echo "JOB_NAME - $env.JOB_NAME"
                       echo "BUILD_TAG - $env.BUILD_TAG"
                       echo "BUILD_URL - $env.BUILD_URL"
-		      echo "JAVA_HOME - $env.JAVA_HOME%"
-	              echo "JRE_HOME - $env.JRE_HOME%"
-		      echo "MAVEN_HOME- $env.MAVEN_HOME%"
-			
-			
                 }
             }
 
-                        stage('Mvn clean package'){
+
+						stage('Package'){
                             steps {
                                 sh "mvn clean package"
+                             }
 
+                        }
 
-                            }
-                         }
-		
-		
-			stage('Docker compose'){
+                        stage('Docker Compose Build') {
                             steps {
-                        sh "ls -la"	    
-		//	sh "docker-compose –f build-compose.yml"
-				    
-			//sh " docker-compose -f ~/var/jenkins_home/workspace/docker-compose.yml"	    
-				sh "docker-compose build"
-			//	sh "docker-compose up"
-				//sh "docker push docker push csabaazari/user-service:latest"
-
-
+                            sh "docker-compose build"
                             }
-                          }
 
-		stage ('Build docker image') {
-                           steps {
-//                            //"docker build -t csabaazari/currency-exchange-devops:$env.BUILD_TAG"
-                          script {
-                               dockerImage = docker.build("csabaazari/user-service:latest:${env.BUILD_TAG}")
-//
-//                             //  dockerImage = docker.run ("csabaazari/currency-exchange-devops11:${env.BUILD_TAG}")
- //                               }
-  //                          }
-   //                     }
-//		stage ('Run docker image') {
- //                           steps {
-   //                         sh "docker run -d -p 8077:8000 csabaazari/currency-exchange-devops11:${env.BUILD_TAG}"
-                          }
-                      }
-                 
-     }
+                        }
+                 stage('Docker push image') {
+                 steps {
+                 sciprt {
+                        dockerImage = docker.build ("csabaazari/user-service:latest")
+
+                 }
+
+                 }
+                 }
+
+      }
       post {
             always {
                 echo 'Im awsome. I run always'
@@ -96,3 +72,6 @@ pipeline {
                  echo 'I run when you fail'
             }
       }
+
+}
+
