@@ -56,7 +56,7 @@ pipeline {
                         stage('push dockerimage'){
                         steps{
                         script{
-                            docker.withRegistry('https://hub.docker.com/','dockerlogin'){
+                            docker.withRegistry('https://registry.hub.docker.com/','dockerlogin'){
 
                           //  dockerImage.push('csabaazari/user-service:latest');
                           //  dockerImage.push('latest');
@@ -65,7 +65,7 @@ pipeline {
                     }
                }
 
-stage('Docker push') {
+			stage('Docker push') {
                             steps {
                             sh "docker push csabaazari/user-service:latest"
 
