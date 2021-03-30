@@ -50,24 +50,18 @@ pipeline {
                             }
 
                         }
-                  stage('Docker push image') {
-                  steps{
-                  script {
-
-                  docker.Registry('https://hub.docker.com/', 'dockerlogin') {
 
 
-                  }
-                }
-               }
-            }
-
-                            stage('Docker push?') {
-                            steps {
-                            sh "docker push csabaazari/user-service:latest"
+                        stage('push dockerimage'){
+                        steps{
+                        script{
+                            docker.withRegistry('','dockerlogin'){
+                            dockerImage.push();
+                            dockerImage.push('latest');
                             }
-
                         }
+                    }
+               }
 
 
       }
