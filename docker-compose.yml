@@ -200,11 +200,11 @@ services:
       - mysql-database
 
   user-service:
-    container_name: csabaazari/user-service
+    container_name: user-service
     build:
       context: ./user-service
       dockerfile: dockerfile
-    image: user-service:latest
+    image: /csabaazari/user-service:latest
     networks:
       - studentTaskChecker
     ports:
